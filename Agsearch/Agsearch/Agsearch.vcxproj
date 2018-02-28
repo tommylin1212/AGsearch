@@ -111,6 +111,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="agent.h" />
+    <ClInclude Include="exploredset.h" />
+    <ClInclude Include="frontier.h" />
+    <ClInclude Include="globals.h" />
+    <ClInclude Include="node.h" />
+    <ClInclude Include="problem.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="agent.cpp" />
+    <ClCompile Include="exploredset.cpp" />
+    <ClCompile Include="frontier.cpp" />
+    <ClCompile Include="node.cpp" />
+    <ClCompile Include="problem.cpp" />
+    <ClCompile Include="Source.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="test.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

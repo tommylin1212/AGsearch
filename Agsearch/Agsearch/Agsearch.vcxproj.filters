@@ -14,4 +14,49 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="agent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="exploredset.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="frontier.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="globals.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="node.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="problem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="agent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="exploredset.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="frontier.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="node.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="problem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="test.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+  </ItemGroup>
 </Project>
