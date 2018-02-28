@@ -9,13 +9,15 @@ class Agent {
 public:
 	Agent();
 	Agent(Problem*);
-	Node* bsearch(std::string, std::string);
+	Node* Searches(std::string a);
 	void printExploredSet() const;
 	void printFrontier() const;
+	void setsearch(char* n);
 private:
 	ExploredSet exset;
 	Frontier f;
 	Problem* m;
+	bool AorG;
 };
 
 #endif

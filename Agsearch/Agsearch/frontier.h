@@ -12,7 +12,7 @@ class Frontier {
 public:
 	Frontier();
 	~Frontier();
-	bool add(Node*);
+	bool add(Node*,bool);
 	bool check(Node*);
 	bool checksame(Node*);
 	bool isEmpty();
@@ -20,8 +20,6 @@ public:
 	void setType(FrontierType);
 	void print() const;
 	Node* get(std::string a);
-
-	void replace(std::string a, Node * b);
 	
 private:
 	FrontierType type;

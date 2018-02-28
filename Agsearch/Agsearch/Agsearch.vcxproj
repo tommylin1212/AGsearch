@@ -120,6 +120,7 @@
     <ClInclude Include="globals.h" />
     <ClInclude Include="node.h" />
     <ClInclude Include="problem.h" />
+    <ClInclude Include="Source.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="agent.cpp" />
@@ -130,6 +131,8 @@
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="actf.txt" />
+    <Text Include="pairs.txt" />
     <Text Include="test.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

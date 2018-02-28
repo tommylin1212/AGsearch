@@ -1,0 +1,65 @@
+Arad Timisoara 0 118
+Arad Sibiu 1 140
+Arad Zerind 2 75
+
+Bucharest Urziceni 0 85
+Bucharest Fagaras 1 211
+Bucharest Pitesti 2 101
+Bucharest Giurgiu 3 90
+
+Craiova Pitesti 0 138
+Craiova Rimnicu 1 146
+Craiova Drobeta 3 120
+
+Drobeta Craiova 0 120
+Drobeta Mehadia 1 75
+
+Efordie Hirsova 0 86
+
+Fagaras Sibiu 0 99
+Fagaras Bucharest 1 211
+
+Giurgiu Bucharest 0 90
+
+Hirsova Urziceni 0 98
+Hirsova Efordie 1 86
+
+Iasi Neamt 0 87
+Iasi Vaslui 1 92
+
+Lugoj Timisoara 0 111
+Lugoj Mehadia 1 70
+
+Mehadia Lugoj 0 70
+Mehadia Drobeta 1 75
+
+Neamt Iasi 0 87
+
+Oradea Zerind 0 71
+Oradea Sibiu 1 151
+
+Pitesti Rimnicu 0 97
+Pitesti Craiova 1 138
+Pitesti Bucharest 2 101
+
+Rimnicu Sibiu 0 80
+Rimnicu Craiova 1 146
+Rimnicu Pitesti 2 97
+
+Sibiu Oradea 0 151
+Sibiu Arad 1 140
+Sibiu Rimnicu 2 80
+Sibiu Fagaras 3 99
+
+Timisoara Lugoj 0 111
+Timisoara Arad 1 118
+
+Urziceni Bucharest 0 85
+Urziceni Hirsova 1 98
+Urziceni Vaslui 2 142
+
+Vaslui Iasi 0 92
+Vaslui Urziceni 1 142
+
+Zerind Arad 0 75
+Zerind Oradea 1 71

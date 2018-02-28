@@ -12,28 +12,26 @@ Frontier::~Frontier() {
 	}
 }
 
-bool Frontier::add(Node * p) {
-	if (!check(p)) {
+bool Frontier::add(Node * p,bool a_g) {
 		if (fnodes.empty()) {
 			fnodes.push_back(p);
 			return true;
 		}
 		FrontierList::iterator it = fnodes.begin();
 		for (; it < fnodes.end(); it++) {
-			if (p->getpathcost() < (*it)->getpathcost()) {
-				break;
+			if (!a_g) {
+				if (p->gethcost() < (*it)->gethcost()) {//greedy
+					break;
+				}
+			}
+			else{
+				if (p->getcost()+p->gethcost() < (*it)->getcost()+(*it)->gethcost()) {
+					break;
+				}
 			}
 		}
 		fnodes.insert(it, p);
 		return true;
-	}
-	else {
-		Node * other = get(p->getName());
-		if (other->getpathcost() > p->getpathcost()) {
-			replace(other->getName(), p);
-		}
-		return false;
-	}
 }
 
 bool Frontier::check(Node * p) {
@@ -84,13 +82,4 @@ Node* Frontier::get(string a) {
 	return NULL;
 }
 
-void Frontier::replace(string a, Node* b) {
-	FrontierList::iterator it;
-	for (it=fnodes.begin(); it < fnodes.end();it++) {
-		if ((*it)->getName() == a) {
-			break;
-		}
-	}
-	fnodes.erase(it);
-	add(b);
-}
+

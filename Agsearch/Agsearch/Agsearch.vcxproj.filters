@@ -33,6 +33,9 @@
     <ClInclude Include="problem.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Source.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="agent.cpp">
@@ -56,6 +59,12 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="test.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="actf.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="pairs.txt">
       <Filter>Resource Files</Filter>
     </Text>
   </ItemGroup>

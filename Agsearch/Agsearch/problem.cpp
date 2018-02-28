@@ -6,7 +6,7 @@ Problem::Problem() {
 	//nothing to do here
 }
 
-bool Problem::init(std::string fname) {
+bool Problem::init(std::string fname, string fname1) {
 	ifstream ifs(fname.c_str());
 	if (ifs.fail()) {
 		cout << "Invalid map file. Exiting.";
@@ -24,10 +24,33 @@ bool Problem::init(std::string fname) {
 		}
 		else {
 			ifs.putback(check);
-			ifs >> city1 >> city2 >> weight;
+			ifs >> city1 >> city2 >>trash>> weight;
 			insert(CityLink(city1, city2, weight));
 		}
 	}
+	ifs.close();
+	ifs.open(fname1.c_str());
+	if (ifs.fail()) {
+		cout << "Invalid actf file. Exiting.";
+		return false;
+	}
+	while (!ifs.eof()) {
+		check = ifs.get();
+		if (check == '#') {
+			while (check != '\n') {
+				check = ifs.get();
+			}
+		}
+		else {
+			ifs.putback(check);
+			ifs >> city1 >>city2 >> weight;
+			Hueristic temp;
+			temp.name = city1;
+			temp.weight = weight;
+			inserth(temp);
+		}
+	}
+	ifs.close();
 	return true;
 }
 
@@ -36,6 +59,10 @@ bool Problem::insert(CityLink temp) {
 		if (temp == cmap[i])return false;
 	}
 	cmap.push_back(temp);
+	return true;
+}
+bool Problem::inserth(Hueristic temp) {
+	hmap.push_back(temp);
 	return true;
 }
 
@@ -63,6 +90,12 @@ CityList Problem::findNeighbors(std::string temp) {
 void Problem::print() const {
 	for (int i = 0; i < cmap.size(); i++) {
 		cmap[i].print();
+	}
+}
+
+double Problem::findh(std::string a){
+	for (int i = 0; i < hmap.size(); i++){
+		if (hmap[i].name == a) return hmap[i].weight;
 	}
 }
 
