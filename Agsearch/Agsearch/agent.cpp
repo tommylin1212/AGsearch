@@ -24,14 +24,9 @@ Node * Agent::Searches(std::string a) {
 		CityList temp = m->findNeighbors(test->getName());
 		for (int i = 0; i < temp.size(); i++) {
 			Node *child = new Node(test, temp[i].name, temp[i].dist, m->findh(temp[i].name));
-			cout << "frontier:";
-			f.print();
-			cout << endl;
+			
 			if (!exset.check(child)) {
 				f.add(child,AorG);
-				cout << "frontier:";
-				f.print();
-				cout << endl;
 			}
 		}
 	}

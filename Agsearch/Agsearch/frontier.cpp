@@ -25,7 +25,7 @@ bool Frontier::add(Node * p,bool a_g) {
 				}
 			}
 			else{
-				if (p->getcost()+p->gethcost() < (*it)->getcost()+(*it)->gethcost()) {
+				if (p->getpathcost()+p->gethcost() < (*it)->getpathcost()+(*it)->gethcost()) {
 					break;
 				}
 			}
