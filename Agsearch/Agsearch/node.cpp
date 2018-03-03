@@ -48,7 +48,7 @@ bool Node::operator<(const Node & n1) {
 }
 
 void Node::print() const {
-	cout << name<<"("<<ucost<<")"<<"("<<hcost+ucost<<")";
+	cout << name<<"("<<ucost<<")"<<"("<<hcost+pcost<<")";
 }
 
 void Node::traceBack(bool pc) {
@@ -56,7 +56,7 @@ void Node::traceBack(bool pc) {
 		parent->traceBack(false);
 		cout << "->";
 	}
-	cout << name<<"("<<ucost<<")";
+	cout << name<<"("<<pcost<<")" << "(" << hcost + pcost << ")";
 	if (pc)cout << " total cost: " << pcost;
 }
 void Node::setcost(double a) {
